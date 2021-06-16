@@ -1,0 +1,26 @@
+﻿<Window x:Class="SetForegroundWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SetForegroundWindow"
+        mc:Ignorable="d"
+        Title="置顶小工具" Height="200" Width="400">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+
+        <ComboBox x:Name="WindowNameComboBox" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <Button x:Name="ApplyButton" Content="置顶" Click="ApplyButton_Click" Grid.ColumnSpan="2" Margin="0,92,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="RefreshButton" Grid.Column="2" Content="刷新" Click="RefreshButton_Click" Margin="0,92,0,0" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
